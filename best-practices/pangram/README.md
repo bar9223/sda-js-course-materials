@@ -7,7 +7,7 @@ Zaimplementuj brakującą logikę w JSie konieczną do sprawdzenia czy zdanie wp
 
 ### Zalożenia:
 - zdania porównujemy ze standardowym angielskim alfabetem _(26 znaków)_
-- w implementacji weź pod uwagę wszystki **dobre paraktyki** omówione podczas zajęć
+- w implementacji weź pod uwagę wszystkie **dobre paraktyki** omówione podczas zajęć
 - kod powinien być **reużywalny**, tzn. logika odpowiedzialna za walidację zdań w łatwy sposób może być wykorystana w innym miejscu
 - zwróć uwagę na **wydajność** rozwiązania
 - zwróć uwagę na **czytelność** kodu

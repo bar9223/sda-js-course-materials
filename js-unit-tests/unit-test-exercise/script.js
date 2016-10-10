@@ -6,7 +6,7 @@
  */
 function getRawNumberFromCSSUnit(unit) {
   if (typeof unit !== 'string') {
-    throw new Error('argument must be typeof string')
+    throw new Error('argument must be typeof string');
   }
 
   return parseFloat(unit);

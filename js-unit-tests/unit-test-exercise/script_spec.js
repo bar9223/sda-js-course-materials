@@ -5,6 +5,12 @@ describe('fake suite', function () {
 });
 
 describe('Gets raw number from CSS measurement Unit', function () {
+    it("return sum of two integers", function () {
+        expect(getRawNumberFromCSSUnit('300px')).toBe(300);
+        expect(getRawNumberFromCSSUnit('10%')).toBe();
+        
+    }
+)
   /**
    * List of missing test cases:
    * - test px, em, % values

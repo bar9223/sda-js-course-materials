@@ -1,5 +1,11 @@
 'use strict';
-
+/**
+ * @desc 
+ * @ adds Class to HTMLElement 
+ * @ param {HTMLElement} element
+ * @ param {String} className
+ * @ throw
+ * */
 function addClass(element, className) {
   if (element.className.indexOf(className) === -1) {
     element.className += ' ' + className;
