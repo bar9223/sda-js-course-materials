@@ -35,6 +35,21 @@
     { id: 'button4', color: '#f46242' },
     { id: 'button5', color: '#42f4bc' }
   ];
+  data.forEach(function(button){
+     document.getElementById(button.id).addEventListener('click',function(event){
+        document.getElementsByTagName('p')[0].style.color = button.color;
+     });
+  });
+  
+  function onClickFunctionBuilder(color){
+      return function(){
+          this.style.color = color;
+      };
+  }
+  for (var i=0; i < data.length; i++ ){
+      var item = data[i];
+      document.getElementById(item.id).addEventListener('click', onClickFunctionBuilder(item.color));
+  };
 </script>
 </body>
 </html>
