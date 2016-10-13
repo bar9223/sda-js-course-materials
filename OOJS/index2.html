@@ -11,6 +11,45 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        <script>
+            
+            function Vehicle(name, numberOfGears, currentGear) {
+                if(!this instanceof Vehicle){
+                    return new Vehicle(name, numberOfGears,currentGear);// ten kod zabespiecza że nasze this w tym przypadku nawet po dokonaniu zmian w kodzie zawsze będzie Vehicle
+                }
+                this.name = name;
+                this.numberOfGears = numberOfGears;
+                this.currentGear = currentGear;
+                this.sayName = function () {
+                    return this.name;
+                };
+                this.sayNumberOfGears = function () {
+                    return this.numberOfGears;
+
+                };
+                this.sayCurrentGear = function () {
+                    return this.currentGear;
+
+            };
+            
+        };
+            var Vehicle1 = new Vehicle('C4', 5, 2);
+            var Vehicle2 = new Vehicle('Multipla', 4, 1);
+            var Vehicle3 = new Vehicle('BMW', 6, 6);
+            var Vehicle4 = new Vehicle('Mazda', 4, 4);
+             
+             
+            function Car(name,numberOfGears,currentGear,brand){
+                Vehicle.call(this,name,numberOfGears,currentGear);// metoda call jako kontekst podaje this
+            };
+            
+            var a = Car('fesef',4,3,2);
+             
+            Car.prototype = Object.create(Vehicle.prototype);//zmiana prototypu w którym był konstruktor
+            Car.prototype.constructor = Car;
+            //var Car = new Car('Multipla', 4, 1, 'ford');
+
+        </script>
+
     </body>
 </html>
